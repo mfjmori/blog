@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col s12 m6" id ="card">
+    <div class="card grey lighten-5">
+      <a href="#">
+        <div class="card-content black-text">
+          <span class="card-title"><%= @article.title %></span>
+          <p class="created-date grey-text"><%= @article.created_at.strftime("%Y-%m-%d") %></p>
+          <p><%= @article.content %></p>
+          <object class="writter right">
+            <%= link_to "投稿者:#{@article.user.nickname}", user_path(@article.user) %>
+          </object>
+        </div>
+      </a>
+      <% if user_signed_in? && @article.user_id == current_user.id %>
+      <div class="card-action">
+        <%= link_to "編集", edit_article_path(@article) %>
+        <%= link_to "削除", article_path(@article), method: :delete, data:{ confirm: '削除しますか？' } %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
