@@ -25,6 +25,7 @@ class ArticlesController < ApplicationController
 
   def edit
     @article = Article.find(params[:id])
+    redirect_to action: :index unless @article.user_id == current_user.id
   end
 
   def update
