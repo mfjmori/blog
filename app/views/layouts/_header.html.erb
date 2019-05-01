@@ -1,6 +1,6 @@
 <nav class=" orange lighten-1">
   <div class="nav-wrapper">
-    <%= link_to "Blog", articles_path, class: "brand-logo", id: "logo" %>
+    <%= link_to "Mini Blog", articles_path, class: "brand-logo", id: "logo" %>
     <ul id="nav-mobile" class="right">
       <% if user_signed_in? %>
         <li><%= link_to "マイページ", user_path(current_user) %></li>
