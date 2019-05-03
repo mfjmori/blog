@@ -2,28 +2,12 @@
     padding-left: 10px;
   }
 
-.wrapper {
-  padding: 0 20px;
-}
-
-#card {
-  margin: 0 auto;
-  float: none;
-}
-
-#content {
+#hide {
  margin-bottom: 10px;
  overflow: hidden;
  display: -webkit-box;
  -webkit-box-orient: vertical;
  -webkit-line-clamp: 5;
-}
-
-#form {
-  background-color: white;
-  width: 80%;
-  margin: 0 auto;
-  float: none;
 }
 
 #form-box {
