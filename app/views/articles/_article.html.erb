@@ -1,11 +1,11 @@
 <div class="row">
   <div class="col s12 m10 offset-m1">
-    <div class="card grey lighten-5">
+    <div class="card grey lighten-5 <%= hoverable_article_index %>">
       <%= link_to article_path(article) do %>
         <div class="card-content black-text">
-          <span class="card-title"><%= article.title %></span>
+          <span class="card-title truncate"><%= article.title %></span>
           <p class="created-date grey-text"><%= article.created_at.strftime("%Y-%m-%d") %></p>
-          <p id="<%= active_controller_and_action %>"><%= article.content %></p>
+          <p id="<%= truncate_contents_article_index %>"><%= article.content %></p>
           <object class="writter right">
             <%= link_to "投稿者:#{article.user.nickname}", user_path(article.user) %>
           </object>

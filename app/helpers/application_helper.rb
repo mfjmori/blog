@@ -1,12 +1,18 @@
 module ApplicationHelper
 
-  def active_controller_and_action
-    if params[:controller] == 'articles' && params[:action] == 'index'
-      "hide"
-    elsif params[:controller] == 'users' && params[:action] == 'show'
-      "hide"
-    else
+  def truncate_contents_article_index
+    if params[:controller] == 'articles' && params[:action] == 'show'
       nil
+    else
+      "hide"
+    end
+  end
+
+  def hoverable_article_index
+    if params[:controller] == 'articles' && params[:action] == 'show'
+      nil
+    else
+      "hoverable"
     end
   end
 end
