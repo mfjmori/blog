@@ -3,9 +3,14 @@
     <div class="card grey lighten-5 <%= hoverable_article_index %>">
       <%= link_to article_path(article) do %>
         <div class="card-content black-text">
+          <% if article.publish == false %>
+            <object>
+              <%= link_to "下書き中", edit_article_path(article), class: "light-blue darken-3 btn right"%>
+            </object>
+          <% end %>
           <span class="card-title truncate"><%= article.title %></span>
           <p class="created-date grey-text"><%= article.created_at.strftime("%Y-%m-%d") %></p>
-          <p id="<%= truncate_contents_article_index %>"><%= article.content %></p>
+          <p class="article-content" id="<%= truncate_content_article_index %>"><%= article.content %></p>
           <object class="writter right">
             <%= link_to "投稿者:#{article.user.nickname}", user_path(article.user) %>
           </object>

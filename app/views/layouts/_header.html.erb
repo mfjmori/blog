@@ -1,9 +1,9 @@
-<nav class=" orange lighten-1">
+<nav class=" orange lighten-1" id="header">
   <div class="nav-wrapper">
     <%= link_to "Mini Blog", articles_path, class: "brand-logo", id: "logo" %>
     <ul id="nav-mobile" class="right">
       <% if user_signed_in? %>
-        <li><%= link_to "マイページ", user_path(current_user) %></li>
+        <li><%= link_to "#{current_user.nickname}さんのページ", user_path(current_user) %></li>
         <li><%= link_to "新規投稿", new_article_path %></li>
         <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
       <% else %>
