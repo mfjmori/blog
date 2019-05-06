@@ -1,6 +1,14 @@
-  #logo {
-    padding-left: 10px;
-  }
+#header {
+  margin-bottom: 30px;
+}
+
+#logo {
+  padding-left: 10px;
+}
+
+.article-content {
+  line-height: 25px;
+}
 
 #hide {
  margin-bottom: 10px;
