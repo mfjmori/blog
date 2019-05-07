@@ -16,6 +16,7 @@
  display: -webkit-box;
  -webkit-box-orient: vertical;
  -webkit-line-clamp: 5;
+ max-height: 150px;
 }
 
 #form-box {
