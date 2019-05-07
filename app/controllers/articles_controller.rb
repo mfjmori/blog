@@ -31,11 +31,11 @@ class ArticlesController < ApplicationController
   end
 
   def edit
-    redirect_to action: :index unless @article.user_id == current_user.id
+    redirect_to action: :index if @article.user_id != current_user.id
   end
 
   def update
-    redirect_to action: :index unless @article.user_id == current_user.id
+    redirect_to action: :index if @article.user_id != current_user.id
     if @article.update(article_params)
       redirect_to action: :index
     else
