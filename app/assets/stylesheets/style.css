@@ -6,12 +6,12 @@
   padding-left: 10px;
 }
 
-.article-content {
+#card-content .article-content {
   line-height: 25px;
+  margin-bottom: 10px;
 }
 
 #hide {
- margin-bottom: 10px;
  overflow: hidden;
  display: -webkit-box;
  -webkit-box-orient: vertical;

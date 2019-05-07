@@ -2,7 +2,7 @@
   <div class="col s12 m10 offset-m1">
     <div class="card grey lighten-5 <%= hoverable_article_index %>">
       <%= link_to article_path(article) do %>
-        <div class="card-content black-text">
+        <div class="card-content black-text" id="card-content">
           <% if article.publish == false %>
             <object>
               <%= link_to "下書き中", edit_article_path(article), class: "light-blue darken-3 btn right"%>
