@@ -4,7 +4,7 @@ module ApplicationHelper
     if params[:controller] == 'articles' && params[:action] == 'show'
       nil
     else
-      "hide"
+      "truncate-content"
     end
   end
 

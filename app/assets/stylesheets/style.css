@@ -11,7 +11,7 @@
   margin-bottom: 10px;
 }
 
-#hide {
+#truncate-content {
  overflow: hidden;
  display: -webkit-box;
  -webkit-box-orient: vertical;
